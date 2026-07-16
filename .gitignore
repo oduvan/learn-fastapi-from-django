@@ -1,0 +1,21 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local virtualenvs
+/.venv/
+/.venv-mkdocs/
+
+# SQLite databases created by runnable examples
+*.sqlite3
+*.db
+
+# MkDocs build output
+/site/
+
+# Editor / OS noise
+.DS_Store
+*.swp

@@ -1,0 +1,88 @@
+site_name: Learn FastAPI from Django
+site_description: Conspect notes for a Django developer moving to (and comparing) FastAPI
+site_url: https://oduvan.github.io/learn-fastapi-from-django/
+repo_url: https://github.com/oduvan/learn-fastapi-from-django
+repo_name: oduvan/learn-fastapi-from-django
+edit_uri: edit/master/
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - content.code.copy
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - Home: index.md
+  - Getting started:
+      - What is FastAPI: 01-getting-started/01-what-is-fastapi.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          name: English
+          default: true
+          build: true
+        - locale: uk
+          name: Українська
+          build: true
+          site_name: Вчимо FastAPI з досвідом Django
+          nav_translations:
+            Home: Головна
+            Getting started: Початок роботи
+            What is FastAPI: Що таке FastAPI
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/oduvan/learn-fastapi-from-django
