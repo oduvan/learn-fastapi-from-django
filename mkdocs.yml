@@ -48,6 +48,11 @@ exclude_docs: |
   # Companion FastAPI/Django projects are runnable source, not doc pages.
   */**/*-demo/
 
+# Package each chapter's companion projects as downloadable .zip archives
+# at build time (see the hook for details).
+hooks:
+  - hooks/companion_zips.py
+
 markdown_extensions:
   - admonition
   - attr_list

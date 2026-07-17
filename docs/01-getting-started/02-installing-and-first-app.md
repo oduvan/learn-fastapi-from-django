@@ -179,10 +179,11 @@ a test pinning this exact behaviour.
 Both apps above are complete, runnable projects under this chapter's
 `02-demo/` folder:
 
-- `02-demo/fastapi/` — `main.py`, tests, `requirements.txt`. Run with
-  `fastapi dev main.py`; test with `pytest`.
-- `02-demo/django/` — `config/` project + `items/` app. Run with
-  `python manage.py runserver`; test with `python manage.py test`.
+- `02-demo/fastapi/` ([download](02-demo-fastapi.zip)) — `main.py`, tests,
+  `requirements.txt`. Run with `fastapi dev main.py`; test with `pytest`.
+- `02-demo/django/` ([download](02-demo-django.zip)) — `config/` project +
+  `items/` app. Run with `python manage.py runserver`; test with
+  `python manage.py test`.
 
 Each side has a small test suite (six tests) asserting the responses shown
 here, including the `422`/`404` difference. Every chapter from here on

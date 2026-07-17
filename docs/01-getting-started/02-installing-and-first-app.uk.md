@@ -181,10 +181,12 @@ FastAPI оголошує `item_id: int`, тож він *валідує* шлях
 Обидва застосунки вище — це повноцінні робочі проєкти в каталозі
 `02-demo/` цього розділу:
 
-- `02-demo/fastapi/` — `main.py`, тести, `requirements.txt`. Запуск через
-  `fastapi dev main.py`; тестування через `pytest`.
-- `02-demo/django/` — проєкт `config/` + застосунок `items/`. Запуск через
-  `python manage.py runserver`; тестування через `python manage.py test`.
+- `02-demo/fastapi/` ([завантажити](02-demo-fastapi.zip)) — `main.py`,
+  тести, `requirements.txt`. Запуск через `fastapi dev main.py`;
+  тестування через `pytest`.
+- `02-demo/django/` ([завантажити](02-demo-django.zip)) — проєкт `config/`
+  + застосунок `items/`. Запуск через `python manage.py runserver`;
+  тестування через `python manage.py test`.
 
 Кожна сторона має невеликий набір тестів (шість тестів), що перевіряють
 показані тут відповіді, включно з різницею `422`/`404`. Кожен розділ,
