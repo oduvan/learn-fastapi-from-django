@@ -43,6 +43,34 @@ learn-fastapi-from-django/
   (e.g. `NN-demo-app/`). Inside those subfolders normal Python project
   conventions apply — the numeric-prefix rule does not.
 
+## Companion projects (one FastAPI + one Django per chapter)
+
+Every chapter ships **two runnable, tested projects** — a FastAPI one and
+a Django one — implementing exactly the functionality the chapter
+describes. They let a reader run and diff the same feature built each way.
+
+- **Location.** Beside the chapter, in a folder named `NN-demo/` where
+  `NN` matches the chapter's number, with two subfolders:
+  `NN-demo/fastapi/` and `NN-demo/django/`. Each is a self-contained
+  project (its own `requirements.txt`, pinned to the versions this repo
+  targets, and a short `README.md` with run + test commands).
+- **Excluded from the docs build.** `mkdocs.yml` has an `exclude_docs`
+  pattern (`*/**/*-demo/`) so these source trees are never turned into
+  doc pages. The chapter's `.md` shows and explains the code; the folder
+  holds the runnable copy.
+- **Tested before every commit.** Both sides must actually run and pass
+  their tests (FastAPI via `pytest` + `TestClient`; Django via
+  `manage.py test`) on Python 3.13 before you commit. The two projects
+  should expose the **same API** so their tests assert equivalent
+  behaviour — including the places where the frameworks legitimately
+  differ (e.g. a bad path type is `422` in FastAPI, `404` in Django).
+- **Referenced from the chapter.** End (or thread through) each chapter
+  with a short "Companion projects" section pointing at the two folders
+  and their run/test commands.
+- Keep code inside the chapter `.md` in sync with the real project files —
+  the prose snippets should be copy-pasted from (or identical to) what's
+  in `NN-demo/`, so what the reader reads is what actually runs.
+
 ## Workflow
 
 1. **Discuss in chat first.** A new topic starts with conversation —

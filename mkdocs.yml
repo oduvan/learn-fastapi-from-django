@@ -42,6 +42,11 @@ nav:
   - Home: index.md
   - Getting started:
       - What is FastAPI: 01-getting-started/01-what-is-fastapi.md
+      - Installing FastAPI and your first app: 01-getting-started/02-installing-and-first-app.md
+
+exclude_docs: |
+  # Companion FastAPI/Django projects are runnable source, not doc pages.
+  */**/*-demo/
 
 markdown_extensions:
   - admonition
@@ -81,6 +86,7 @@ plugins:
             Home: Головна
             Getting started: Початок роботи
             What is FastAPI: Що таке FastAPI
+            Installing FastAPI and your first app: Встановлення FastAPI та ваш перший застосунок
 
 extra:
   social:
