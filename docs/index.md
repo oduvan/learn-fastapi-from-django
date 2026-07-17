@@ -34,15 +34,27 @@ callouts and side-by-side code, not in a separate chapter.
 The structure below is the working outline for the book — it will grow
 into linked articles as each one is written.
 
-1. **Getting started** — what FastAPI is, installing it, your first app, the dev server (`uvicorn` vs `runserver`), and how you lay out a project without Django's app/project scaffolding.
-2. **Routing and requests** — path operations vs `urls.py`, path and query parameters, request bodies, responses and status codes, forms and file uploads.
-3. **Data with Pydantic** — Pydantic models vs Django forms and DRF serializers, validation, `response_model`, and settings management.
-4. **Databases** — choosing an ORM (Django ORM vs SQLAlchemy / SQLModel), models and migrations (Alembic vs Django migrations), querying, and async database access.
-5. **Dependency injection** — `Depends()`, the idea Django has no direct equivalent for; dependencies with `yield`, sub-dependencies, and reuse.
-6. **Auth and middleware** — Django auth/sessions vs OAuth2/JWT, security dependencies, middleware, and CORS.
-7. **Async and concurrency** — WSGI vs ASGI, `async def` and when to use it, background tasks vs Celery.
-8. **Testing** — `TestClient` vs Django's test client, pytest patterns, testing dependencies and async code.
-9. **From Django's batteries to a FastAPI stack** — the admin gap, templates and static files, and deployment.
+1. **Getting started** — what FastAPI is, installing it, your first app, the dev server (`uvicorn` vs `runserver`), project layout without Django's app/project scaffolding, and application lifespan (startup/shutdown, the `AppConfig.ready()` analogue).
+2. **Routing and requests** — path operations vs `urls.py`, path and query parameters, request bodies, responses and status codes, error handling and exceptions (`HTTPException`, handlers, the `422` shape), forms and file uploads, and the shift away from class-based views.
+3. **Data with Pydantic** — Pydantic models vs Django forms and DRF serializers, validation, `response_model`, and settings (`pydantic-settings` vs `settings.py`).
+4. **Templates and static files** — `Jinja2Templates` vs the Django Template Language, `render()` → returning an `HTMLResponse`, and serving static assets vs `collectstatic`.
+5. **Databases** — SQLAlchemy + Alembic: models, the session, migrations vs Django migrations, querying, serializing ORM objects with Pydantic (`from_attributes`, the `ModelSerializer` analogue), and async access.
+6. **Dependency injection** — `Depends()`, the idea Django has no direct equivalent for; dependencies with `yield`, sub-dependencies, reuse, and what replaces signals.
+7. **Authentication** — Django auth/sessions vs OAuth2/JWT, security dependencies, CSRF and the cookie-vs-token model, and CORS.
+8. **Middleware** — Starlette middleware vs Django's `MIDDLEWARE` stack.
+9. **Async and concurrency** — WSGI vs ASGI, `async def` and when to use it, background tasks vs Celery, and WebSockets vs Django Channels.
+10. **Testing** — pytest: `TestClient`, fixtures, and testing dependencies and async code.
+11. **The admin gap and deployment** — what replaces `django.contrib.admin`, and deploying Uvicorn workers.
+
+**Appendix — Ecosystem map:** a Django-package → FastAPI-stack cheat-sheet (DRF → FastAPI-native, `django-allauth` → `fastapi-users`, Celery → `arq`/Celery, `django.contrib.admin` → SQLAdmin, `django-filter` → query params, caching, pagination, rate limiting, and packaging).
+
+### Companion projects
+
+Every chapter ships with two small, runnable **companion projects** — one
+in **FastAPI** and one in **Django** — that implement exactly the
+functionality the chapter describes, with tests proving they work. You can
+read the chapter, then download and run both sides to see the same feature
+built each way.
 
 ## Source
 
