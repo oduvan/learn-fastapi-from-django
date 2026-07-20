@@ -44,6 +44,8 @@ nav:
       - What is FastAPI: 01-getting-started/01-what-is-fastapi.md
       - Installing FastAPI and your first app: 01-getting-started/02-installing-and-first-app.md
       - The dev server: 01-getting-started/03-the-dev-server.md
+      - Project structure: 01-getting-started/04-project-structure.md
+      - Application lifespan: 01-getting-started/05-application-lifespan.md
 
 exclude_docs: |
   # Companion FastAPI/Django projects are runnable source, not doc pages.
@@ -94,6 +96,8 @@ plugins:
             What is FastAPI: Що таке FastAPI
             Installing FastAPI and your first app: Встановлення FastAPI та ваш перший застосунок
             The dev server: Сервер для розробки
+            Project structure: Структура проєкту
+            Application lifespan: Життєвий цикл застосунку
 
 extra:
   social:

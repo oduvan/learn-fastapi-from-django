@@ -28,6 +28,10 @@ Django працювали на вас, а не заважали.
 ### [Початок роботи](01-getting-started/01-what-is-fastapi.md)
 
 - [Що таке FastAPI](01-getting-started/01-what-is-fastapi.md) — фреймворк, його стек і чим його філософія відрізняється від Django.
+- [Встановлення FastAPI та ваш перший застосунок](01-getting-started/02-installing-and-first-app.md) — налаштування та перший типізований застосунок поруч із Django.
+- [Сервер для розробки](01-getting-started/03-the-dev-server.md) — `fastapi dev` / `uvicorn` проти `runserver`, перезавантаження та воркери.
+- [Структура проєкту](01-getting-started/04-project-structure.md) — `APIRouter` / `include_router` проти застосунків Django та `include()`.
+- [Життєвий цикл застосунку](01-getting-started/05-application-lifespan.md) — startup/shutdown у `lifespan` проти `AppConfig.ready()`.
 
 ### Заплановані теми
 

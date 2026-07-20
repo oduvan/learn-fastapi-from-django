@@ -28,6 +28,10 @@ callouts and side-by-side code, not in a separate chapter.
 ### [Getting started](01-getting-started/01-what-is-fastapi.md)
 
 - [What is FastAPI](01-getting-started/01-what-is-fastapi.md) — the framework, the stack, and how its philosophy differs from Django's.
+- [Installing FastAPI and your first app](01-getting-started/02-installing-and-first-app.md) — setup and a first typed app, side by side with Django.
+- [The dev server](01-getting-started/03-the-dev-server.md) — `fastapi dev` / `uvicorn` vs `runserver`, reload, and workers.
+- [Project structure](01-getting-started/04-project-structure.md) — `APIRouter` / `include_router` vs Django apps and `include()`.
+- [Application lifespan](01-getting-started/05-application-lifespan.md) — `lifespan` startup/shutdown vs `AppConfig.ready()`.
 
 ### Planned topics
 
